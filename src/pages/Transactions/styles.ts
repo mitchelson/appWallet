@@ -10,6 +10,8 @@ export const ButtonNewTransaction = styled.TouchableOpacity`
   border-radius: 30px;
   background-color: #00f;
   position: absolute;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   bottom: 20px;
   right: 20px;

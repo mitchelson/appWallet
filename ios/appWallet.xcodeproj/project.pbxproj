@@ -116,6 +116,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				DD071E3428A5830F0088BF90 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* appWallet */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* appWalletTests */,
@@ -146,6 +147,13 @@
 				5E1C6A059F057908790E19F1 /* Pods-appWallet-appWalletTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD071E3428A5830F0088BF90 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

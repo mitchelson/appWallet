@@ -12,7 +12,13 @@ export const Routes: React.FC = () => {
         headerShown: false,
       }}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="TransactionRoutes" component={TransactionRoutes} />
+      <Tab.Screen
+        name="TransactionRoutes"
+        options={{
+          title: 'Transactions',
+        }}
+        component={TransactionRoutes}
+      />
     </Tab.Navigator>
   );
 };

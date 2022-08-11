@@ -7,6 +7,7 @@ interface ITransactionCardProps {
   date: string;
   type: 'income' | 'outcome';
   status: 'open' | 'closed';
+  category: string;
 }
 
 export const TransactionCard: React.FC<ITransactionCardProps> = props => {
