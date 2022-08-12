@@ -1,71 +1,99 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { FlatList } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5';
 import Header from '../../components/Header';
 import { TransactionCard } from '../../components/TransactionCard';
+import { Transactions as TransactionModel } from '../../models/Transactions';
 import * as S from './styles';
 
-const transactions = [
+const transactions: TransactionModel[] = [
   {
     id: '1',
     title: 'Lazer',
-    value: 200,
+    amount: 20000,
     date: '2020-01-01',
     type: 'outcome',
     status: 'closed',
-    category: 'Lazer',
+    category: {
+      id: '1',
+      title: 'Lazer',
+      color: '#ea7d7d',
+      icon: 'shopping-cart',
+    },
   },
   {
     id: '2',
     title: 'Almoço',
-    value: 100,
+    amount: 10000,
     date: '2020-01-01',
     type: 'outcome',
     status: 'open',
-    category: 'Lazer',
+    category: {
+      id: '1',
+      title: 'Lazer',
+      color: '#ea7d7d',
+      icon: 'shopping-cart',
+    },
   },
   {
     id: '3',
-    title: 'Lazer',
-    value: 200,
+    title: 'Salário',
+    amount: 900000,
     date: '2020-01-01',
-    type: 'outcome',
+    type: 'income',
     status: 'open',
-    category: 'Lazer',
+    category: {
+      id: '1',
+      title: 'Lazer',
+      color: '#ea7d7d',
+      icon: 'shopping-cart',
+    },
   },
   {
     id: '5',
     title: 'Almoço',
-    value: 100,
+    amount: 10000,
     date: '2020-01-01',
     type: 'outcome',
     status: 'open',
-    category: 'Lazer',
+    category: {
+      id: '1',
+      title: 'Lazer',
+      color: '#ea7d7d',
+      icon: 'shopping-cart',
+    },
   },
   {
     id: '6',
     title: 'Lazer',
-    value: 200,
+    amount: 20000,
     date: '2020-01-01',
     type: 'outcome',
     status: 'open',
-    category: 'Lazer',
+    category: {
+      id: '1',
+      title: 'Lazer',
+      color: '#ea7d7d',
+      icon: 'shopping-cart',
+    },
   },
 ];
 
 export const Transactions: React.FC = () => {
   const { navigate } = useNavigation();
+
+  const navigateToEdit = (id: string) => {
+    navigate('EditTransaction' as never);
+  };
+
   return (
     <S.Container>
       <Header title="Transações" />
-      <S.ButtonNewTransaction
-        onPress={() => navigate('EditTransaction' as never)}>
+      <S.ButtonNewTransaction onPress={navigateToEdit}>
         <FontAwesome name="plus" size={24} color="#fff" />
       </S.ButtonNewTransaction>
-      <FlatList
+      <S.FlatList
         data={transactions}
-        style={{ width: '100%', height: '100%', padding: 10, paddingTop: 120 }}
         keyExtractor={item => item.id}
         renderItem={({ item }) => <TransactionCard {...item} />}
       />
