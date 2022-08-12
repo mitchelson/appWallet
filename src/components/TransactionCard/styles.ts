@@ -1,8 +1,8 @@
 import FontAwesome from 'react-native-vector-icons/FontAwesome5';
 import styled from 'styled-components/native';
-import { Transactions } from '../../models/Transactions';
+import { Transaction } from '../../models/Transaction';
 
-export const Container = styled.TouchableOpacity<Transactions>`
+export const Container = styled.TouchableOpacity<Transaction>`
   background-color: #fff;
   opacity: ${props => (props.status === 'closed' ? 0.4 : 1)};
   border-radius: 15px;
@@ -12,7 +12,7 @@ export const Container = styled.TouchableOpacity<Transactions>`
   overflow: hidden;
 `;
 
-export const BoxIcon = styled.View<Transactions>`
+export const BoxIcon = styled.View<Transaction>`
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -22,7 +22,7 @@ export const BoxIcon = styled.View<Transactions>`
   margin-right: 10px;
 `;
 
-export const Icon = styled(FontAwesome).attrs((props: Transactions)=>({
+export const Icon = styled(FontAwesome).attrs((props: Transaction)=>({
   name: props.category.icon,
   size: 20,
   color: '#fff',
@@ -44,7 +44,7 @@ export const Title = styled.Text`
   font-family: "Roboto-Medium";
 `;
 
-export const Value = styled.Text<Transactions>`
+export const Value = styled.Text<Transaction>`
   font-size: 18px;
   font-family: "Roboto-Regular";
   color: ${props => props.type === "income" ? "#669966":"#cc6666"};

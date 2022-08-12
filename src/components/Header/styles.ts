@@ -8,8 +8,6 @@ export const Container = styled.View`
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  z-index: 1;
-  position: absolute;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: hidden;

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Transactions } from '../../models/Transactions';
+import { Transaction } from '../../models/Transactions';
 import { currency } from '../../utils/currency';
 import * as S from './styles';
 
-export const TransactionCard: React.FC = (props: Transactions) => {
+export const TransactionCard: React.FC = (props: Transaction) => {
   return (
     <S.Container type={props.type} status={props.status}>
       <S.Row>

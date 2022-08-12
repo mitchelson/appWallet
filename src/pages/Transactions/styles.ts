@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  
+  flex: 1;
 `;
 
 export const ButtonNewTransaction = styled.TouchableOpacity`
@@ -25,5 +25,18 @@ export const FlatList = styled.FlatList`
   width: 100%;
   height: 100%;
   padding: 10px;
-  padding-top: 120px;
+`;
+
+export const EmptyContainer = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const EmptyText = styled.Text`
+  font-size: 20px;
+  font-family: 'Roboto-Bold';
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
 `;
